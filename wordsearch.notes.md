@@ -1,11 +1,13 @@
 # Markov Wordsearch — Notes
 
 ## Overview
+
 A wordsearch generator/player driven by a Markov-chain letter model trained
 on a reference text, with target words embedded into the grid. The UI is
 split into four modes: **Design**, **Watch**, **Play**, and **Collapse**.
 
 ## Page structure (`index.html`)
+
 - `<aside>` — sidebar containing mode tabs and all configuration panels.
   - `.mode-tabs` — buttons (`data-mode="design|watch|play|collapse"`) that
     toggle the corresponding `#panel-*` section.
@@ -40,6 +42,7 @@ split into four modes: **Design**, **Watch**, **Play**, and **Collapse**.
 - Entry point script: `./src/index.js` (ES module).
 
 ## Styling (`style.css`)
+
 - Dark, glassmorphic "vibrant" theme using CSS custom properties for
   palette, radius, shadow, and easing (`:root` variables).
 - Animated gradient background (`bg-drift`) plus a subtle starfield
@@ -69,10 +72,11 @@ split into four modes: **Design**, **Watch**, **Play**, and **Collapse**.
 - Pause anti-cheat overlay (`.pause-overlay`): heavy blur/tint over the
   grid while paused so letters can't be read, with an icon + message.
 - Collapse-mode tile drop animation via `.dropping` (`will-change:
-  transform`).
+transform`).
 - Responsive: sidebar stacks above main content below 820px width.
 
 ## Follow-ups
+
 - The `.home-link` now points to `/` (site root) instead of a relative
   `../../index.html` path — verify this resolves correctly in all
   deployment contexts (e.g. if the app is served from a sub-path,
